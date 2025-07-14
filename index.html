@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Optimiza tu PyME con Galaxy 2.0, el software de gestión para Windows fácil de usar. Controla inventario, ventas y producción en tu red Wi-Fi. ¡Prueba la demo!">
+    <meta name="keywords" content="software gestion pymes argentina, erp para emprendedores, control inventario windows, software gestion costos, sistema ventas pymes, software produccion argentina, ademasistemas, galaxy 2.0, software escritorio, gestion simple pymes">
+    <title>Galaxy 2.0: Software de Gestión Simple para PyMEs en Windows</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Galaxy 2.0",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows",
+      "description": "Software de gestión simple para PyMEs y emprendimientos en Argentina. Controla inventario, costos, ventas, producción y más. Accede desde cualquier dispositivo en tu red Wi-Fi.",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Precio Regular",
+          "price": "50.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Oferta Especial de Julio - 50% OFF",
+          "price": "25.00",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2025-07-31",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "Galaxy 2.0"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ademaSistemas.com",
+        "url": "http://ademasistemas.com"
+      }
+      // Considera agregar "review" o "aggregateRating" si tienes reseñas de usuarios.
+      // "screenshot": "URL_A_TU_CAPTURA_DE_PANTALLA.jpg", // Agrega una URL a una captura de pantalla
+      // "softwareVersion": "2.0"
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* */
+            background-color: #1a1a1a; /* */
+            color: #e0e0e0; /* */
+        }
+
+        .navbar-brand-neon {
+            color: #ff6600 !important; /* */
+            font-weight: bold; /* */
+            text-shadow: 0 0 3px #ff6600;  /* */
+        }
+
+        .nav-link-neon {
+            color: #ff9933 !important; /* */
+        }
+        .nav-link-neon:hover, .nav-link-neon:focus, .nav-link-neon.active {
+            color: #ff6600 !important; /* */
+            text-shadow: 0 0 2px #ff6600;  /* */
+        }
+
+        .neon-text {
+            color: #ff7f00; /* */
+            text-shadow: 0 0 4px rgba(255, 102, 0, 0.7);  /* */
+        }
+
+        .neon-border {
+            border: 1px solid #ff6600; /* */
+            box-shadow: 0 0 5px rgba(255, 102, 0, 0.5), 0 0 10px rgba(255, 153, 51, 0.3) inset;  /* */
+            border-radius: 8px; /* */
+        }
+        
+        .section-padding {
+            padding: 60px 0; /* */
+        }
+
+        .section-title {
+            font-family: 'Roboto Slab', serif; /* */
+            font-weight: 700; /* */
+            margin-bottom: 40px; /* */
+            text-align: center; /* */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+             font-family: 'Roboto Slab', serif; /* */
+        }
+        
+        h1.neon-text, h2.neon-text, h3.neon-text, h4.neon-text, h5.neon-text {
+             text-shadow: 0 0 5px rgba(255, 102, 0, 0.7); /* */
+        }
+
+        .hero-section {
+            /* COMENTARIO: Considera optimizar la imagen de fondo 'https://via.placeholder.com/1920x600.png?text=Galaxy+2.0+Background' para mejorar tiempos de carga */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x600.png?text=Galaxy+2.0+Background') no-repeat center center; /* */
+            background-size: cover; /* */
+            padding: 100px 0; /* */
+            text-align: center; /* */
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem; /* */
+            margin-bottom: 20px; /* */
+        }
+
+        .hero-section p {
+            font-size: 1.2rem; /* */
+            margin-bottom: 30px; /* */
+            color: #f0f0f0; /* */
+        }
+
+        .btn-neon {
+            background-color: #ff6600; /* */
+            border-color: #ff6600; /* */
+            color: #ffffff;  /* */
+            font-weight: bold; /* */
+            padding: 10px 25px; /* */
+            border-radius: 50px; /* */
+            transition: all 0.3s ease; /* */
+            box-shadow: 0 0 3px #ff6600, 0 0 5px #ff9933;  /* */
+        }
+
+        .btn-neon:hover, .btn-neon:focus {
+            background-color: #ff9933; /* */
+            border-color: #ff9933; /* */
+            color: #1a1a1a; /* */
+            box-shadow: 0 0 5px #ff6600, 0 0 10px #ff9933;  /* */
+            transform: translateY(-2px); /* */
+        }
+
+        .btn-secondary-neon {
+            background-color: transparent; /* */
+            border: 2px solid #ff9933;  /* */
+            color: #ff9933; /* */
+            font-weight: bold; /* */
+            padding: 10px 25px; /* */
+            border-radius: 50px; /* */
+            transition: all 0.3s ease; /* */
+        }
+        
+        .btn-secondary-neon:hover, .btn-secondary-neon:focus {
+            background-color: #ff9933; /* */
+            border-color: #ff9933; /* */
+            color: #1a1a1a; /* */
+            box-shadow: 0 0 5px #ff6600, 0 0 10px #ff9933; /* */
+            transform: translateY(-2px); /* */
+        }
+
+        .btn-outline-neon {
+            color: #ff9933;
+            border-color: #ff9933;
+            background-color: transparent;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 2px #ff9933;
+            border-width: 2px; /* Ensure border is visible */
+        }
+        .btn-outline-neon:hover, .btn-outline-neon:focus {
+            color: #1a1a1a; /* Dark text on hover */
+            background-color: #ff9933;
+            border-color: #ff9933;
+            box-shadow: 0 0 5px #ff6600, 0 0 10px #ff9933;
+            transform: translateY(-2px);
+        }
+
+        .card-neon {
+            background-color: #222; /* */
+            border: 1px solid #ff6600;  /* */
+            box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);  /* */
+            transition: transform 0.3s ease; /* */
+            height: 100%; /* */
+        }
+        .card-neon:hover {
+            transform: translateY(-5px); /* */
+        }
+
+        .card-neon .card-title {
+            color: #ff9933; /* */
+        }
+        .card-neon .card-text{
+            color: #ccc; /* */
+        }
+        
+        .youtube-video-container {
+            position: relative; /* */
+            overflow: hidden; /* */
+            width: 100%; /* */
+            max-width: 720px; /* Ancho máximo para el video */ /* */
+            margin-left: auto; /* */
+            margin-right: auto; /* */
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */ /* */
+            margin-top: 20px; /* */
+            margin-bottom: 20px; /* */
+            border: 2px solid #ff6600; /* */
+            border-radius: 8px; /* */
+            box-shadow: 0 0 10px rgba(255,102,0,0.5); /* */
+        }
+
+        .youtube-video-container iframe {
+            position: absolute; /* */
+            top: 0; /* */
+            left: 0; /* */
+            bottom: 0; /* */
+            right: 0; /* */
+            width: 100%; /* */
+            height: 100%; /* */
+        }
+
+        /* Estilos para el Acordeón FAQ - INTEGRADOS AQUÍ */
+        .accordion-button {
+            background-color: #2c2c2c; /* */
+            color: #ff9933; /* */
+            font-weight: bold; /* */
+            border: none; /* */
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #ff6600; /* */
+            color: #1a1a1a; /* Texto oscuro para contraste cuando está desplegado */ /* */
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.125); /* */
+        }
+        .accordion-button:focus { /* Para accesibilidad y feedback visual */
+            box-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.5); /* */
+            border-color: #ff6600; /* */
+        }
+        .accordion-button::after { /* Ícono del acordeón (flecha) */
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff9933'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); /* */
+        }
+        .accordion-button:not(.collapsed)::after { /* Ícono cuando está desplegado */
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231a1a1a'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); /* */
+        }
+        .accordion-item {
+            background-color: #222; /* */
+            /* Fondo del item del acordeón */
+            border: 1px solid #ff6600; /* */
+            /* Borde neón para cada item */
+            margin-bottom: 10px; /* */
+            /* Espacio entre items */
+            border-radius: .375rem; /* */
+        }
+        .accordion-body {
+            color: #e0e0e0; /* */
+            /* Color de texto del cuerpo del acordeón */
+            background-color: #1e1e1e; /* */
+            /* Fondo ligeramente diferente para el cuerpo */
+            border-top: 1px solid rgba(255, 102, 0, 0.5); /* */
+            /* Línea separadora sutil */
+        }
+        .accordion-body a {
+            color: #ff9933; /* */
+            font-weight: 500; /* */
+        }
+        .accordion-body a:hover {
+            color: #ff6600; /* */
+            text-decoration: underline; /* */
+        }
+        /* Fin de Estilos para Acordeón FAQ */
+
+        #contacto {
+            background-color: #222; /* */
+        }
+        
+        footer {
+            background-color: #111; /* */
+            color: #aaa; /* */
+            padding: 20px 0; /* */
+            text-align: center; /* */
+            border-top: 1px solid #ff6600; /* */
+        }
+        footer a {
+            color: #ff9933; /* */
+        }
+        footer a:hover {
+            color: #ff6600; /* */
+        }
+
+        .offer-banner {
+            background-color: #ff6600;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-bottom: 3px solid #ff9933;
+        }
+        .price-original {
+            text-decoration: line-through;
+            color: #bbb;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        .price-offer {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ffc107; /* Un amarillo para destacar la oferta */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-neon" href="#">Galaxy 2.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="#resumen">Resumen</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="#que-es">¿Qué es?</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="#modulos">Módulos</a></li> <li class="nav-item"><a class="nav-link nav-link-neon" href="tutoriales.html">Tutoriales</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="#faq-section">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="#demo">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="#adquirir">Adquirir</a></li> <li class="nav-item"><a class="nav-link nav-link-neon" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="neon-text">Galaxy 2.0</h1> <p>Software de gestión simple para tu PyME o emprendimiento en Argentina. ¡Fácil, potente y en tu PC!</p> <p>Controla inventario, costos, ventas, producción y mucho más de forma eficiente y sencilla.</p>
+            <a href="#demo" class="btn btn-neon btn-lg me-2">Probar Demo</a>
+            <a href="#adquirir" class="btn btn-secondary-neon btn-lg">Adquirir Versión Full</a>
+        </div>
+    </header>
+
+    <section id="resumen" class="section-padding">
+        <div class="container">
+            <h2 class="section-title neon-text">Resumen de Galaxy 2.0: Software para PyMEs</h2> <p class="lead text-center">Galaxy 2.0 es un <strong>software de gestión de escritorio para Windows</strong>, diseñado en Argentina, pensado para simplificar y potenciar la administración de pequeñas y medianas empresas (PyMEs). Una vez instalado, puedes acceder y trabajar desde <strong>cualquier dispositivo conectado a tu misma red Wi-Fi</strong>. </p>
+            <p class="text-center">Nos enfocamos en la simplicidad: realiza compras, ventas, controla gastos y tu inventario sin complicaciones. Administra las cuentas corrientes de tus clientes y proveedores fácilmente. Todo en un lenguaje claro y sencillo para emprendedores. </p>
+            <div class="row mt-5">
+                <div class="col-md-3 mb-4">
+                    <div class="card card-neon">
+                        <div class="card-body text-center">
+                            <i class="bi bi-windows fs-1 neon-text mb-3"></i> <h5 class="card-title">Para Windows</h5>
+                            <p class="card-text">Instalación local en tu PC con sistema Windows.</p> </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card card-neon">
+                        <div class="card-body text-center"> <i class="bi bi-wifi fs-1 neon-text mb-3"></i>
+                            <h5 class="card-title">Acceso en Red Local</h5>
+                            <p class="card-text">Usa la aplicación desde otros dispositivos en tu red Wi-Fi.</p> </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card card-neon"> <div class="card-body text-center">
+                            <i class="bi bi-cart-check-fill fs-1 neon-text mb-3"></i>
+                            <h5 class="card-title">Gestión Centralizada</h5> <p class="card-text">Ventas, compras, inventario y gastos en un solo lugar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4"> <div class="card card-neon">
+                        <div class="card-body text-center">
+                            <i class="bi bi-gear-fill fs-1 neon-text mb-3"></i>
+                            <h5 class="card-title">Personalizable</h5> <p class="card-text">Adapta datos de empresa, moneda y más a tu negocio.</p>
+                        </div>
+                    </div> </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="que-es" class="section-padding bg-dark neon-border">
+        <div class="container">
+            <h2 class="section-title neon-text">¿Qué es Galaxy 2.0 y Cómo Funciona este Sistema de Gestión?</h2>
+            <p>Galaxy 2.0 es una <strong>aplicación de escritorio diseñada para el sistema operativo Windows</strong>. Su objetivo es ser lo más <strong>simple e intuitiva</strong> posible, eliminando procesos complejos de otros ERP para que te concentres en lo importante de tu emprendimiento. </p>
+            <p>Una vez que instalas y ejecutas Galaxy 2.0 en tu computadora principal, el sistema se vuelve accesible desde <strong>cualquier otro dispositivo (como una tablet, notebook o smartphone) que esté conectado a la misma red Wi-Fi</strong>. Esto te brinda flexibilidad para consultar información o realizar gestiones desde diferentes puntos de tu negocio u hogar, sin necesidad de instalaciones adicionales en cada dispositivo. </p>
+            <p>El sistema se enfoca en las tareas esenciales de gestión: <strong>realizar compras, registrar ventas, controlar gastos y llevar un inventario actualizado</strong> de manera sencilla. También incluye un módulo de <strong>cuentas corrientes</strong> para que puedas evaluar el estado de cuenta con tus proveedores y el que tus clientes tienen contigo. Además, puedes personalizar fácilmente datos como el <strong>nombre de tu empresa, información de contacto y el signo de la moneda</strong> que utilizas en Argentina u otro país. </p>
+        </div>
+    </section>
+    
+    <section id="modulos" class="section-padding"> <div class="container">
+            <h2 class="section-title neon-text">Módulos Principales del Software de Gestión</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="neon-text"><i class="bi bi-people-fill"></i> Clientes y Proveedores</h5>
+                    <p>Gestión completa de datos, contactos y sus respectivas cuentas corrientes. Ideal para el manejo de tu cartera.</p> </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="neon-text"><i class="bi bi-box-seam-fill"></i> Inventario y Productos</h5>
+                    <p>Control de insumos, productos simples y compuestos (recetas), stock, costos y precios de venta. Incluye gestión de unidades de medida y categorías para tu PyME.</p> </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="neon-text"><i class="bi bi-receipt-cutoff"></i> Compras y Gastos</h5>
+                    <p>Registro y seguimiento de compras a proveedores y gastos generales del negocio de forma simple y eficiente.</p> </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="neon-text"><i class="bi bi-clipboard-data-fill"></i> Pedidos y Presupuestos (Ventas)</h5>
+                    <p>Creación y administración de presupuestos y pedidos de clientes, con seguimiento de estados y pagos. Optimiza tu proceso de ventas.</p> </div>
+                 <div class="col-md-4 mb-3">
+                    <h5 class="neon-text"><i class="bi bi-cash-coin"></i> Pagos y Cuentas Corrientes</h5>
+                    <p>Registro detallado de pagos recibidos y realizados. Controla saldos pendientes de clientes y a proveedores.</p> </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="neon-text"><i class="bi bi-tools"></i> Producción / Fabricación</h5>
+                    <p>Planificación y control de lotes de producción para productos compuestos, verificación de insumos y registro de unidades fabricadas. Software de producción integrado.</p> </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="neon-text"><i class="bi bi-bar-chart-line-fill"></i> Dashboard y Reportes</h5>
+                    <p>Visualización de métricas clave del negocio. Exporta datos en formato XLSX para análisis detallado.</p> </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="neon-text"><i class="bi bi-shop"></i> Mi Tienda (Base para Catálogo)</h5>
+                    <p>Módulo para visualizar productos y configuraciones, con posibilidad de listar precios para tus clientes.</p>
+                </div> <div class="col-md-4 mb-3">
+                    <h5 class="neon-text"><i class="bi bi-gear-fill"></i> Configuración General</h5>
+                    <p>Personaliza datos de tu empresa (nombre, CUIT, etc.), moneda, logo y más ajustes del sistema.</p>
+                </div> </div>
+        </div>
+    </section>
+
+    <section id="tutoriales" class="section-padding bg-dark neon-border">
+        <div class="container text-center">
+            <h2 class="section-title neon-text">Tutorial General de Galaxy 2.0</h2>
+            <p>Mira este video para un recorrido completo por las funcionalidades principales de Galaxy 2.0 y cómo puede ayudar a tu emprendimiento:</p>
+            
+             <div class="youtube-video-container"> <iframe src="https://www.youtube.com/embed/JddTuJ0YEok" 
+                        title="Tutorial General Galaxy 2.0 - Software de Gestión para PyMEs" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <p class="mt-4">Para guías más detalladas sobre funciones específicas de nuestro software, visita nuestra sección de tutoriales:</p> 
+            <a href="tutoriales.html" class="btn btn-neon mt-2 mb-5"><i class="bi bi-collection-play-fill"></i> Ver Todos los Tutoriales del Sistema</a>
+
+            <div>
+                <h4 class="neon-text mb-4">Guías Destacadas:</h4>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="tutorial_instalacion.html" class="btn btn-outline-neon d-block w-100"><i class="bi bi-download"></i> Instalación de Galaxy 2.0</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="tutorial_configuracion_inicial.html" class="btn btn-outline-neon d-block w-100"><i class="bi bi-sliders"></i> Configuración Inicial</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="tutorial_alta_clientes.html" class="btn btn-outline-neon d-block w-100"><i class="bi bi-person-plus-fill"></i> Alta y Gestión de Clientes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq-section" class="section-padding">
+        <div class="container">
+            <h2 class="section-title neon-text">Preguntas Frecuentes (FAQ) sobre Galaxy 2.0</h2>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                     <div class="accordion" id="faqAccordion"> <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> ¿En qué sistemas operativos funciona Galaxy 2.0? </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Galaxy 2.0 está diseñado y optimizado para funcionar en computadoras con sistema operativo <strong>Windows</strong> (versiones 7, 8, 10 y 11). </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Necesito conexión a internet para usar Galaxy 2.0? </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No, para el funcionamiento diario de Galaxy 2.0 <strong>no necesitas una conexión permanente a internet</strong>. Es una aplicación de escritorio que se instala y opera localmente en tu PC. La conexión a internet solo sería necesaria para descargar el instalador por primera vez o para futuras actualizaciones del software. </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Cómo accedo a Galaxy 2.0 desde otros dispositivos en mi red Wi-Fi? </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Una vez que Galaxy 2.0 está instalado y ejecutándose en tu computadora principal (servidor), puedes acceder a la aplicación desde otros dispositivos (como tablets, notebooks o smartphones) conectados a la <strong>misma red Wi-Fi local</strong>. Esto se hace ingresando la dirección IP local de tu PC principal seguida del puerto específico de Galaxy 2.0 en el navegador web del otro dispositivo (ej. <code>http://192.168.1.100:8000</code>). Encontrarás una guía detallada sobre cómo configurar esto en nuestra sección de <a href="tutoriales.html">Tutoriales</a>. </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingFour"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    ¿Mis datos están seguros? ¿Dónde se almacenan? </button>
+                            </h3>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    La seguridad de tu información es una prioridad. Todos tus datos de Galaxy 2.0 se almacenan <strong>localmente en la base de datos dentro de tu propia computadora</strong> donde instalaste el software. Esto significa que tú tienes el control total sobre tu información y no se almacena en la nube ni en servidores de terceros. Recomendamos encarecidamente que realices <strong>copias de seguridad (backups) periódicas</strong> de tus datos para prevenir pérdidas ante cualquier eventualidad en tu equipo. </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingFive"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    ¿Cuál es el precio de Galaxy 2.0 y qué incluye la licencia? </button>
+                            </h3>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Galaxy 2.0 tiene un costo único de <strong>50 USD</strong> (dólares estadounidenses) o su equivalente in moneda local al momento de la compra. Esta licencia te otorga acceso a la <strong>versión completa y permanente del software</strong> con todas sus funcionalidades descritas. No hay pagos mensuales ni suscripciones recurrentes para el uso del software base. </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item"> <h3 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    ¿Cómo obtengo soporte técnico si tengo problemas? </button>
+                            </h3>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ofrecemos varias vías de soporte. Puedes consultar nuestra completa sección de <a href="tutoriales.html">Tutoriales</a> y esta página de FAQ. Si necesitas asistencia adicional, puedes contactarnos al email de soporte que figura en la sección de <a href="#contacto">Contacto</a>. Para requerimientos de desarrollos a medida o integraciones, visita <a href="http://ademasistemas.com" target="_blank">ademasistemas.com</a>. </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingSeven"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    ¿Galaxy 2.0 recibe actualizaciones? ¿Tienen costo adicional? </button>
+                            </h3>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, estamos comprometidos con la mejora continua de Galaxy 2.0. Periódicamente liberamos actualizaciones que pueden incluir correcciones de errores, mejoras de rendimiento o nuevas funcionalidades menores. Estas actualizaciones suelen ser <strong>gratuitas para los usuarios con licencia</strong>. En caso de futuras versiones mayores con cambios significativos o módulos completamente nuevos, podría ofrecerse como una actualización opcional con un costo, el cual sería comunicado de forma transparente. </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingEight"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    ¿Puedo personalizar Galaxy 2.0 con el logo y datos de mi empresa? </button>
+                            </h3>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    ¡Absolutamente! Galaxy 2.0 te permite personalizar varios aspectos para que se adapte a tu negocio. Desde el módulo de "Configuración", puedes ingresar el nombre de tu empresa, dirección, CUIT, números de teléfono, email, y también <strong>cargar tu propio logo</strong>. Además, puedes definir la moneda principal y secundaria que utilizas. Esta información se reflejará en documentos como presupuestos y reportes. (Ver <a href="tutorial_configuracion_inicial.html">Tutorial de Configuración Inicial</a>). </div>
+                            </div>
+                        </div>
+                        
+                         <div class="accordion-item"> <h3 class="accordion-header" id="headingNine">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    ¿Galaxy 2.0 es apto para mi tipo de negocio o PyME? </button>
+                            </h3>
+                            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Galaxy 2.0 está diseñado para ser versátil y útil para una amplia gama de <strong>PyMEs y emprendedores</strong> en Argentina y otros países. Es especialmente beneficioso para aquellos que necesitan llevar un control de inventario (insumos y productos elaborados), gestionar compras, registrar ventas (con presupuestos y pedidos), controlar gastos y, si aplica, administrar procesos básicos de producción. Si buscas una herramienta simple, intuitiva y que no requiera grandes conocimientos técnicos para la gestión de tu empresa, Galaxy 2.0 puede ser una excelente opción. </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTen"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    ¿Qué tan difícil es aprender a usar el software Galaxy 2.0? </button>
+                            </h3>
+                            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Hemos puesto un gran énfasis en que Galaxy 2.0 sea <strong>fácil de usar e intuitivo</strong>. La interfaz está diseñada para ser clara y los procesos se han simplificado al máximo. Creemos que podrás comenzar a utilizar las funciones principales rápidamente. Además, cuentas con nuestra sección de <a href="tutoriales.html">Tutoriales detallados</a> y esta página de FAQ para guiarte en cada paso del uso del sistema. </div>
+                            </div>
+                        </div>
+                    </div> </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="adquirir" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title neon-text">Adquiere la Versión Full de Galaxy 2.0</h2>
+            <p>Obtén todas las funcionalidades de Galaxy 2.0, el software de gestión ideal para emprendedores.</p>
+       
+            <p>La licencia desbloquea el potencial completo del software para tu empresa.</p>
+            <!-- Card de precio -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-4">
+                    <div class="card card-neon text-center">
+                        <div class="card-body">
+                            <h4 class="card-title neon-text mb-2">Precio de Galaxy 2.0</h4>
+                            <p class="card-text">Licencia Full <span class="price-offer">50 USD</span></p>
+                            <p class="card-text text-light"> <small class="text-muted">Pago único, sin suscripciones mensuales.</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Card de precio -->
+            <!-- Button to trigger modal -->
+            <button type="button" class="btn btn-neon btn-lg" data-bs-toggle="modal" data-bs-target="#whatsappInfoModal">
+                <i class="bi bi-whatsapp"></i> Contactar por WhatsApp
+            </button>
+            <p class="mt-3"><small>Se abrirá WhatsApp para iniciar una conversación de compra.</small></p>
+        </div>
+    </section>
+
+    
+     <section id="demo" class="section-padding bg-dark neon-border"> <div class="container text-center">
+            <h2 class="section-title neon-text">Prueba Galaxy 2.0: Demo del Software de Gestión</h2>
+            <p>Descarga una versión de demostración y descubre cómo Galaxy 2.0 puede transformar la gestión de tu negocio o PyME.</p>
+            <a href="https://files.fm/f/wth6au4ehp" class="btn btn-neon btn-lg" download target="_blank"><i class="bi bi-download"></i> Descargar Demo</a>
+    </section>
+
+    
+    <section id="contacto" class="section-padding bg-dark neon-border">
+        <div class="container">
+            <h2 class="section-title neon-text">Contacto y Soporte</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3 class="neon-text">Soporte Galaxy 2.0</h3> <p>Si tienes dudas sobre el software Galaxy 2.0 o necesitas asistencia con el sistema, no dudes en contactarnos:</p>
+                    <p><i class="bi bi-envelope-fill neon-text"></i> Email: <a href="mailto:contact@ademasistemas.com" class="nav-link-neon d-inline">contact@ademasistemas.com</a></p>
+                </div> <div class="col-md-6">
+                    <h3 class="neon-text">Desarrollos a Medida por ademaSistemas.com</h3>
+                    <p>Galaxy 2.0 es un proyecto desarrollado por <strong>ademaSistemas.com</strong>.</p>
+                    <p>En <a href="https://ademasistemas.com/" target="_blank" class="nav-link-neon d-inline">ademasistemas.com</a> nos especializamos en el desarrollo de software a medida para empresas y emprendedores. Si necesitas una solución personalizada, más allá de las funcionalidades de Galaxy 2.0, o deseas integrar este sistema con otras herramientas, visita nuestra web.</p> <p>Contamos con un formulario de contacto en <a href="https://ademasistemas.com" target="_blank" class="nav-link-neon d-inline">ademasistemas.com</a> para discutir tus requerimientos específicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer class="section-padding">  <div class="container">
+            <p>© <span id="currentYear"></span> Galaxy 2.0 - Desarrollado por <a href="http://ademasistemas.com" target="_blank" class="nav-link-neon d-inline">ademasistemas.com</a></p>
+            <p><a href="terminos_condiciones.html" class="nav-link-neon d-inline">Términos y Condiciones</a></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Info Modal -->
+    <div class="modal fade" id="whatsappInfoModal" tabindex="-1" aria-labelledby="whatsappInfoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title neon-text" id="whatsappInfoModalLabel">Aviso Importante</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Recuerda que este canal es <strong>ÚNICAMENTE</strong> para consultas o la compra del sistema <strong>Galaxy 2.0</strong>.</p>
+                    <p>Si necesitas información sobre servicios de desarrollos a medida, por favor visita <a href="http://ademasistemas.com" target="_blank" rel="noopener noreferrer" class="nav-link-neon d-inline">ademasistemas.com</a>.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://wa.me/5491127888995?text=quiero%20adquirir%20el%20galaxy%202.0.." class="btn btn-neon" target="_blank" id="confirmWhatsappButton"><i class="bi bi-whatsapp"></i> Continuar a WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5491127888995?text=quiero%20adquirir%20el%20galaxy%202.0.." class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 2.5rem;
+            z-index: 9999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .whatsapp-float:hover {
+            background-color: #1ebe57;
+            color: #fff;
+            transform: scale(1.08);
+        }
+    </style>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear(); /* */
+        // Script para que los enlaces del navbar hagan scroll suave a la sección
+        // y también para cerrar el menú desplegable en móviles después de hacer clic.
+        document.querySelectorAll('#navbarNav .nav-link[href^="#"]').forEach(anchor => { /* */
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                // Solo previene si el enlace es interno a la página y no es solo "#"
+                if (href !== "#" && href.startsWith("#")) {
+                    const targetId = href.substring(1); /* */
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        e.preventDefault(); /* */
+                        const navbarHeight = document.querySelector('.navbar.fixed-top')?.offsetHeight || 0;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+                        window.scrollTo({ /* */
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                        // Cerrar el menú de hamburguesa si está abierto (en vistas móviles)
+                        const navbarToggler = document.querySelector('.navbar-toggler'); // Apuntando al toggler global, no solo al de #navbarNav /* */
+                        const navbarCollapse = document.querySelector('#navbarNav'); /* */
+                        
+                        // Verificar si el toggler está visible (indica vista móvil) y no colapsado
+                        if (navbarToggler && getComputedStyle(navbarToggler).display !== 'none' && navbarCollapse.classList.contains('show')) {
+                             const bsCollapse = new bootstrap.Collapse(navbarCollapse, { /* */
+                                    toggle: false 
+                                });
+                            bsCollapse.hide(); /* */
+                        }
+                    }
+                }
+            });
+        }); /* */
+    </script>
+</body>
+</html>

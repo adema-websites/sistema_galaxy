@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende a dar de alta nuevos clientes en Galaxy 2.0. Gestiona su información de contacto, dirección y condiciones comerciales.">
+    <meta name="keywords" content="alta clientes galaxy 2.0, registrar clientes software, gestión clientes pymes, nuevo cliente galaxy 2.0">
+    <title>Tutorial: Alta de Clientes en Galaxy 2.0 | ademaSistemas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #1a1a1a; color: #e0e0e0; padding-top: 70px; }
+        .navbar-brand-neon { color: #ff6600 !important; font-weight: bold; text-shadow: 0 0 3px #ff6600; }
+        .nav-link-neon { color: #ff9933 !important; }
+        .nav-link-neon:hover, .nav-link-neon:focus, .nav-link-neon.active { color: #ff6600 !important; text-shadow: 0 0 2px #ff6600; }
+        .breadcrumb-item a { color: #ff9933; text-decoration: none; }
+        .breadcrumb-item a:hover { color: #ff6600; }
+        .breadcrumb-item.active { color: #ccc; }
+        .neon-text { color: #ff7f00; text-shadow: 0 0 4px rgba(255, 102, 0, 0.7); }
+        .section-padding { padding: 40px 0; }
+        .page-title { font-family: 'Roboto Slab', serif; font-weight: 700; margin-bottom: 30px; text-align: center; padding-top: 20px; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Roboto Slab', serif; }
+        h1.neon-text, h2.neon-text, h3.neon-text, h4.neon-text, h5.neon-text { text-shadow: 0 0 5px rgba(255, 102, 0, 0.7); }
+        .tutorial-content img { border: 2px solid #ff6600; border-radius: 8px; box-shadow: 0 0 10px rgba(255,102,0,0.3); margin-top: 10px; margin-bottom: 20px; max-width: 100%; height: auto; }
+        .btn-neon { background-color: #ff6600; border-color: #ff6600; color: #ffffff; font-weight: bold; padding: 10px 25px; border-radius: 50px; transition: all 0.3s ease; box-shadow: 0 0 3px #ff6600, 0 0 5px #ff9933; }
+        .btn-neon:hover, .btn-neon:focus { background-color: #ff9933; border-color: #ff9933; color: #1a1a1a; box-shadow: 0 0 5px #ff6600, 0 0 10px #ff9933; transform: translateY(-2px); }
+        footer { background-color: #111; color: #aaa; padding: 20px 0; text-align: center; border-top: 1px solid #ff6600; margin-top: 60px; }
+        footer a { color: #ff9933; }
+        footer a:hover { color: #ff6600; }
+        .tutorial-content ol { padding-left: 2rem; }
+        .tutorial-content ol li { margin-bottom: 0.8rem; line-height: 1.6; }
+        .tutorial-content ol li::marker { color: #ff9933; font-weight: bold;}
+        .alert-neon { background-color: rgba(255, 102, 0, 0.1); border: 1px solid #ff6600; color: #ffccaa; border-radius: 8px; }
+        .alert-neon .alert-heading { color: #ff9933; }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-neon" href="index.html">Galaxy 2.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavTutorialContenido"
+                aria-controls="navbarNavTutorialContenido" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavTutorialContenido">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon active" aria-current="page" href="tutoriales.html">Tutoriales</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="index.html#demo">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="index.html#adquirir">Adquirir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container section-padding">
+        <header class="text-center">
+            <h1 class="page-title neon-text">Alta de Clientes en Galaxy 2.0</h1>
+        </header>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="tutoriales.html">Tutoriales</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Alta de Clientes</li>
+            </ol>
+        </nav>
+        
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 tutorial-content">
+                <p class="lead">Registrar a tus clientes en Galaxy 2.0 es fundamental para llevar un control de tus ventas, cuentas corrientes y emitir presupuestos personalizados. Aquí te mostramos cómo hacerlo.</p>
+                
+                <article class="mt-4">
+                    <h3 class="neon-text mt-4"><i class="bi bi-people-fill text-warning"></i> Accediendo al Módulo de Clientes</h3>
+                    <p>En el menú principal de Galaxy 2.0, busca la sección "<strong>Clientes</strong>" o "<strong>Administración > Clientes</strong>". Haz clic para ingresar al listado de tus clientes.</p>
+                    <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla del menú principal o dashboard mostrando el acceso a "Clientes")</small></p>
+
+                    <h3 class="neon-text mt-5"><i class="bi bi-person-plus-fill text-warning"></i> Agregar un Nuevo Cliente</h3>
+                    <p>Una vez en la pantalla de listado de clientes, busca un botón que diga "<strong>Nuevo Cliente</strong>", "<strong>Agregar Cliente</strong>" o un ícono <i class="bi bi-plus-circle-fill"></i>. Al presionarlo, se abrirá el formulario para ingresar los datos del nuevo cliente.</p>
+                    <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla del listado de clientes, resaltando el botón "Nuevo Cliente")</small></p>
+
+                    <h4 class="neon-text mt-4">Campos Importantes en el Formulario de Cliente:</h4>
+                    <ul class="list-group list-group-flush mt-3">
+                        <li class="list-group-item bg-transparent text-light border-secondary"><strong>Nombre o Razón Social:</strong> El nombre completo del cliente o el nombre de su empresa. <em>Ej: Juan Pérez / La Casa del Tornillo S.A.</em></li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><strong>CUIT / DNI:</strong> Número de identificación fiscal o personal.</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><strong>Dirección:</strong> Calle, número, ciudad, provincia, código postal.</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><strong>Teléfono:</strong> Número de contacto principal.</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><strong>Email:</strong> Dirección de correo electrónico.</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><strong>Observaciones (Opcional):</strong> Cualquier nota adicional sobre el cliente (ej. "Preferencias de envío", "Contacto alternativo", etc.).</li>
+                    </ul>
+                    <p class="text-center fst-italic text-secondary mt-3"><small>(Captura de pantalla del formulario de alta de cliente con campos de ejemplo)</small></p>
+
+                    <h4 class="neon-text mt-4">Guardar el Nuevo Cliente</h4>
+                    <p>Después de completar toda la información relevante, haz clic en el botón "<strong>Guardar</strong>" o "<strong>Crear Cliente</strong>". El nuevo cliente aparecerá ahora en tu listado.</p>
+                    <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla resaltando el botón de Guardar)</small></p>
+                    
+                    <div class="alert alert-neon mt-4" role="alert">
+                        <h4 class="alert-heading"><i class="bi bi-info-circle-fill"></i> ¡Dato Importante!</h4>
+                        <p>Galaxy 2.0 te permite gestionar la <strong>cuenta corriente</strong> de cada cliente. Una vez creado el cliente, podrás ver su historial de compras, pagos y saldo pendiente desde su ficha o desde el módulo de Cuentas Corrientes.</p>
+                    </div>
+
+                    <hr class="my-5 border-secondary">
+
+                    <h4 class="neon-text mt-4">Editar o Eliminar un Cliente</h4>
+                    <p>Desde el listado de clientes, usualmente tendrás opciones junto a cada registro para:</p>
+                    <ul>
+                        <li><i class="bi bi-pencil-fill text-warning"></i> <strong>Editar:</strong> Modificar la información de un cliente existente.</li>
+                        <li><i class="bi bi-trash-fill text-danger"></i> <strong>Eliminar:</strong> Borrar un cliente del sistema (esto puede estar restringido si el cliente tiene transacciones asociadas).</li>
+                    </ul>
+                    <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla del listado de clientes mostrando los botones de editar/eliminar)</small></p>
+
+                    <h4 class="neon-text mt-4">¡Ya puedes gestionar tus clientes!</h4>
+                    <p>Con tus clientes cargados, estás listo para crear presupuestos, registrar ventas y llevar un mejor control de tus relaciones comerciales.</p>
+                </article>
+
+                <div class="text-center mt-5">
+                    <a href="tutoriales.html" class="btn btn-neon"><i class="bi bi-arrow-left-circle-fill"></i> Volver a Todos los Tutoriales</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="currentYear"></span> Galaxy 2.0 - Desarrollado por <a href="http://ademasistemas.com" target="_blank" class="nav-link-neon d-inline">ademasistemas.com</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

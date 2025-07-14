@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende a gestionar Productos (insumos, materias primas) y Productos Compuestos (recetas) en Galaxy 2.0. Controla tu inventario, costos y precios de venta de forma eficiente.">
+    <meta name="keywords" content="gestión de productos, control de insumos, crear recetas software, galaxy 2.0 productos, costos de producción pymes, control de inventario">
+    <title>Tutorial: Gestión de Productos y Recetas - Galaxy 2.0</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos idénticos a los otros tutoriales para consistencia */
+        body { font-family: 'Poppins', sans-serif; background-color: #1a1a1a; color: #e0e0e0; padding-top: 70px; padding-bottom: 80px; }
+        .navbar-brand-neon { color: #ff6600 !important; font-weight: bold; text-shadow: 0 0 3px #ff6600; }
+        .nav-link-neon { color: #ff9933 !important; }
+        .nav-link-neon:hover, .nav-link-neon:focus, .nav-link-neon.active { color: #ff6600 !important; text-shadow: 0 0 2px #ff6600; }
+        .breadcrumb-item a { color: #ff9933; text-decoration: none; }
+        .breadcrumb-item a:hover { color: #ff6600; }
+        .breadcrumb-item.active { color: #ccc; }
+        .neon-text { color: #ff7f00; text-shadow: 0 0 4px rgba(255, 102, 0, 0.7); }
+        .page-title { font-family: 'Roboto Slab', serif; font-weight: 700; margin-bottom: 30px; text-align: center; padding-top: 20px; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Roboto Slab', serif; }
+        h1.neon-text, h2.neon-text, h3.neon-text, h4.neon-text, h5.neon-text { text-shadow: 0 0 5px rgba(255, 102, 0, 0.7); }
+        .tutorial-content img { border: 2px solid #ff6600; border-radius: 8px; box-shadow: 0 0 10px rgba(255,102,0,0.3); margin-top: 10px; margin-bottom: 20px; max-width: 100%; height: auto; }
+        .btn-neon-outline { color: #ff9933; border-color: #ff9933; background-color: transparent; }
+        .btn-neon-outline:hover { color: #1a1a1a; background-color: #ff9933; border-color: #ff9933; }
+        footer { background-color: #111; color: #aaa; padding: 20px 0; text-align: center; border-top: 1px solid #ff6600; margin-top: 60px; }
+        footer a { color: #ff9933; }
+        footer a:hover { color: #ff6600; }
+        .tutorial-content ol, .tutorial-content ul { padding-left: 2rem; }
+        .tutorial-content ol li, .tutorial-content ul li { margin-bottom: 0.8rem; line-height: 1.6; }
+        .tutorial-content ol li::marker { color: #ff9933; font-weight: bold; }
+        .alert-neon { background-color: rgba(255, 102, 0, 0.1); border: 1px solid #ff6600; color: #ffccaa; border-radius: 8px; }
+        .alert-neon .alert-heading { color: #ff9933; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-neon" href="index.html">Galaxy 2.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavTutorialContenido"
+                aria-controls="navbarNavTutorialContenido" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavTutorialContenido">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon active" aria-current="page" href="tutoriales.html">Tutoriales</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="index.html#demo">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="index.html#adquirir">Adquirir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container section-padding">
+        <header class="text-center">
+            <h1 class="page-title neon-text">Gestión de Productos y Productos Compuestos</h1>
+        </header>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="tutoriales.html">Tutoriales</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gestión de Productos</li>
+            </ol>
+        </nav>
+        
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 tutorial-content">
+                <p class="lead">La correcta gestión de tus artículos es el corazón de tu negocio. En Galaxy 2.0, esto se divide en dos áreas principales: los <strong>Productos</strong> (materias primas o insumos que compras) y los <strong>Productos Compuestos</strong> (los artículos que fabricas con recetas).</p>
+                
+                <article class="mt-4">
+                    <h3 class="neon-text mt-5"><i class="bi bi-box-seam-fill text-warning"></i> Parte 1: Gestión de Productos (Materias Primas / Insumos)</h3>
+                    <p>Aquí cargarás todos los artículos que compras a proveedores.</p>
+                    <ol>
+                        <li><strong>Accede al Módulo:</strong> En el menú lateral, haz clic en <strong>Inventario > Productos</strong>.</li>
+                        <li><strong>El Listado de Productos:</strong> Verás una tabla con todos tus productos cargados y columnas como `ESTADO`, `PRODUCTO`, `COSTO UNITARIO`, `PRECIO VENTA` y `RENTABILIDAD`.
+                            <!-- <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla del listado de Productos, mostrando la tabla completa)</small></p> -->
+                        </li>
+                        <li><strong>Acciones en el Listado:</strong>
+                            <ul>
+                                <li><strong>Para Crear:</strong> Haz clic en el botón verde <strong>+ Agregar</strong>.</li>
+                                <li><strong>Para Editar:</strong> Haz clic directamente sobre el nombre del producto en la columna `PRODUCTO`. El nombre es un enlace que te llevará al formulario de edición.</li>
+                                <li><strong>Para Eliminar:</strong> Marca la casilla a la izquierda de cada producto que desees borrar y luego presiona el botón rojo <strong>Eliminar</strong>. El sistema te pedirá una confirmación.</li>
+                                <li><strong>Importar y Exportar:</strong> Usa los botones para cargar o descargar tus productos masivamente desde un archivo Excel. Para más detalles, consulta nuestro <a href="tutorial_importacion_exportacion.html" class="nav-link-neon d-inline">Tutorial de Importación y Exportación</a>.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Formulario para Agregar Producto:</strong> Al crear o editar, verás los siguientes campos:
+                            <!-- <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla del formulario "Agregar Material")</small></p> -->
+                             <ul>
+                                <li><strong>HABILITAR VENTA:</strong> Márcalo si quieres que este producto esté disponible para la venta directa al público.</li>
+                                <li><strong>PRODUCTO:</strong> Nombre único de tu materia prima (ej: "Harina 000").</li>
+                                <li><strong>CANTIDAD y UNIDAD MEDIDA:</strong> Define cómo lo compras (ej: `50` y `Kilogramos` si lo compras en bolsas de 50 kg).</li>
+                                <li><strong>PRECIO COMPRA:</strong> El costo que pagas por la cantidad definida arriba. Este es el dato clave para el cálculo de costos.</li>
+                                <li><strong>RENTABILIDAD / PRECIO VENTA:</strong> Dependiendo de tu configuración, aquí defines tu margen de ganancia o el precio final de venta.</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h3 class="neon-text mt-5"><i class="bi bi-tools text-warning"></i> Parte 2: Gestión de Productos Compuestos (Recetas)</h3>
+                    <p>Aquí es donde creas los artículos que fabricas, asignándoles los "Productos" como ingredientes.</p>
+                     <ol>
+                        <li><strong>Accede al Módulo:</strong> En el menú lateral, ve a <strong>Inventario > Productos Compuestos</strong>.</li>
+                        <li><strong>Crear el Producto Compuesto:</strong>
+                            <p>Haz clic en <strong>+ Agregar</strong>. Primero, completa los datos principales de tu producto elaborado:</p>
+                             <ul>
+                                <li><strong>DESCRIPCIÓN:</strong> El nombre de tu producto final (ej: "Pizza de Mozzarella").</li>
+                                <li><strong>UNIDADES RESULTANTES:</strong> Cuántas porciones o unidades de venta obtienes con esta receta.</li>
+                                <li><strong>RENTABILIDAD / PRECIO VENTA UNITARIO:</strong> Define tu margen de ganancia o el precio de venta final por cada unidad resultante.</li>
+                             </ul>
+                             <p>Luego, haz clic en <strong>"Guardar y continuar editando"</strong>. La página se recargará, permitiéndote cargar la receta.</p>
+                        </li>
+                        <li><strong>Cargar la Receta (los ingredientes):</strong>
+                             <!-- <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla de las dos secciones de carga de ingredientes en Productos Compuestos)</small></p> -->
+                            <p>En la parte inferior del formulario verás dos secciones:</p>
+                            <ul>
+                                <li><strong>Sección INSUMO:</strong> Úsala para agregar las materias primas. Haz clic en "Agregar otro/a Insumo", selecciona un "Producto" de la lista (ej: "Harina 000"), y define la `CANTIDAD` y `MEDIDA DE USO` que lleva tu receta.</li>
+                                <li><strong>Sección INSUMO COMPUESTO REFERENCIA:</strong> Úsala para agregar OTRA RECETA dentro de esta receta. Es ideal para sub-ensambles. <strong>Ejemplo práctico:</strong> si haces una "Torta Entera" (8 porciones) y también vendes "Porciones de Torta", puedes crear primero la receta de la "Porción de Torta". Luego, al crear la "Torta Entera", en esta sección agregas `8` unidades del producto compuesto "Porción de Torta". ¡El sistema calculará los costos en cascada!</li>
+                            </ul>
+                        </li>
+                        <li><strong>Guarda Definitivamente:</strong> Una vez cargados todos los componentes, haz clic en <strong>Guardar</strong>.</li>
+                    </ol>
+                    
+                    <div class="alert alert-neon mt-4" role="alert">
+                        <h4 class="alert-heading"><i class="bi bi-info-circle-fill"></i> ¡Todo Conectado!</h4>
+                        <p>Cuando gestionas tus productos de esta forma, el sistema puede calcular automáticamente los costos de tus recetas, controlar el stock de cada ingrediente y darte una visión clara de la rentabilidad de todo lo que vendes.</p>
+                    </div>
+                </article>
+
+                <div class="text-center mt-5">
+                    <a href="tutoriales.html" class="btn btn-neon-outline"><i class="bi bi-arrow-left-circle-fill"></i> Volver a Todos los Tutoriales</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-5 py-4">
+        <div class="container">
+            <p>© <span id="currentYear"></span> Galaxy 2.0 - Desarrollado por <a href="http://ademasistemas.com" target="_blank" class="nav-link-neon d-inline">ademasistemas.com</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

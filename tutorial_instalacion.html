@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende a instalar Galaxy 2.0 en tu PC Windows paso a paso. Descarga, ejecuta el instalador y comienza a gestionar tu negocio.">
+    <meta name="keywords" content="instalar galaxy 2.0, instalación software gestión, galaxy 2.0 windows, setup galaxy 2.0">
+    <title>Tutorial: Instalación de Galaxy 2.0 | ademaSistemas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos Reutilizados - Idénticos a tutoriales.html y index.html */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0; 
+            padding-top: 70px; 
+        }
+        .navbar-brand-neon { color: #ff6600 !important; font-weight: bold; text-shadow: 0 0 3px #ff6600; }
+        .nav-link-neon { color: #ff9933 !important; }
+        .nav-link-neon:hover, .nav-link-neon:focus, .nav-link-neon.active { color: #ff6600 !important; text-shadow: 0 0 2px #ff6600; }
+        .breadcrumb-item a { color: #ff9933; text-decoration: none; }
+        .breadcrumb-item a:hover { color: #ff6600; }
+        .breadcrumb-item.active { color: #ccc; }
+        .neon-text { color: #ff7f00; text-shadow: 0 0 4px rgba(255, 102, 0, 0.7); }
+        .section-padding { padding: 40px 0; } /* Menor padding para páginas internas */
+        .page-title { font-family: 'Roboto Slab', serif; font-weight: 700; margin-bottom: 30px; text-align: center; padding-top: 20px; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Roboto Slab', serif; }
+        h1.neon-text, h2.neon-text, h3.neon-text, h4.neon-text, h5.neon-text { text-shadow: 0 0 5px rgba(255, 102, 0, 0.7); }
+        .tutorial-content img {
+            border: 2px solid #ff6600;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255,102,0,0.3);
+            margin-top: 10px;
+            margin-bottom: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+        .btn-neon { background-color: #ff6600; border-color: #ff6600; color: #ffffff; font-weight: bold; padding: 10px 25px; border-radius: 50px; transition: all 0.3s ease; box-shadow: 0 0 3px #ff6600, 0 0 5px #ff9933; }
+        .btn-neon:hover, .btn-neon:focus { background-color: #ff9933; border-color: #ff9933; color: #1a1a1a; box-shadow: 0 0 5px #ff6600, 0 0 10px #ff9933; transform: translateY(-2px); }
+        footer { background-color: #111; color: #aaa; padding: 20px 0; text-align: center; border-top: 1px solid #ff6600; margin-top: 60px; }
+        footer a { color: #ff9933; }
+        footer a:hover { color: #ff6600; }
+        /* Estilo específico para listas ordenadas en tutoriales */
+        .tutorial-content ol { padding-left: 2rem; }
+        .tutorial-content ol li { margin-bottom: 0.8rem; line-height: 1.6; }
+        .tutorial-content ol li::marker { color: #ff9933; font-weight: bold;}
+        
+        .youtube-video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            margin-bottom: 1.5rem; /* Espacio debajo del video */
+            border: 2px solid #ff6600;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255,102,0,0.3);
+        }
+        .youtube-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .alert-neon {
+            background-color: rgba(255, 102, 0, 0.1);
+            border: 1px solid #ff6600;
+            color: #ffccaa;
+            border-radius: 8px;
+        }
+        .alert-neon .alert-heading {
+            color: #ff9933;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-neon" href="index.html">Galaxy 2.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavTutorialContenido"
+                aria-controls="navbarNavTutorialContenido" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavTutorialContenido">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon active" aria-current="page" href="tutoriales.html">Tutoriales</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="index.html#demo">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-neon" href="index.html#adquirir">Adquirir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container section-padding">
+        <header class="text-center">
+            <h1 class="page-title neon-text">Guía de Instalación de Galaxy 2.0</h1>
+        </header>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="tutoriales.html">Tutoriales</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Instalación</li>
+            </ol>
+        </nav>
+        
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 tutorial-content">
+                <p class="lead">Sigue estos sencillos pasos para instalar Galaxy 2.0 en tu computadora con Windows y comenzar a gestionar tu negocio de manera eficiente.</p>
+
+                <div class="youtube-video-container my-4">
+                    <iframe src="https://www.youtube.com/embed/F-KV6cE2Mm0" 
+                            title="Tutorial de Instalación Galaxy 2.0" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <article class="mt-4">
+                    <h3 class="neon-text mt-4"><i class="bi bi-1-circle-fill text-warning"></i> Descarga del Instalador</h3>
+                    <p>Primero, necesitas descargar el archivo de instalación de Galaxy 2.0. Ve a la sección de <a href="index.html#demo" class="nav-link-neon d-inline">Descarga Demo</a> en nuestra página principal y haz clic en el botón correspondiente.</p>
+                    <p>Guarda el archivo (por ejemplo, `Galaxy2_Setup.exe`) en una ubicación fácil de recordar en tu computadora, como el Escritorio o tu carpeta de Descargas.</p>
+                    <p class="text-center fst-italic text-secondary"><small>(Aquí iría una captura de pantalla mostrando el botón de descarga en la web)</small></p>
+
+
+                    <h3 class="neon-text mt-5"><i class="bi bi-2-circle-fill text-warning"></i> Ejecución del Instalador</h3>
+                    <p>Una vez que la descarga haya finalizado, localiza el archivo `Galaxy2_Setup.exe` y haz doble clic sobre él para iniciar el asistente de instalación.</p>
+                    
+                    <div class="alert alert-neon mt-3" role="alert">
+                        <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i> ¡Atención Windows SmartScreen!</h4>
+                        <p>Es posible que Windows muestre una advertencia de "Windows protegió su PC". Si esto ocurre, haz clic en "<u>Más información</u>" y luego en el botón "<u>Ejecutar de todas formas</u>". Esto es normal para aplicaciones de desarrolladores que aún no tienen una alta reputación con Microsoft.</p>
+                    </div>
+                    <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla de la advertencia de SmartScreen y cómo permitir la ejecución)</small></p>
+                    
+
+                    <h3 class="neon-text mt-5"><i class="bi bi-3-circle-fill text-warning"></i> Seguir las Instrucciones del Asistente</h3>
+                    <p>El asistente de instalación te guiará a través de los siguientes pasos:</p>
+                    <ol>
+                        <li><strong>Bienvenida:</strong> El asistente te dará la bienvenida. Haz clic en "Siguiente".</li>
+                        <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla del paso de bienvenida del instalador)</small></p>
+
+                        <li><strong>Acuerdo de Licencia:</strong> Lee los términos y condiciones. Si estás de acuerdo, selecciona la opción para aceptar y haz clic en "Siguiente". (Este es un ejemplo, tu app puede o no tener este paso explícito).</li>
+                        
+                        <li><strong>Seleccionar Carpeta de Destino:</strong> Se te sugerirá una carpeta para la instalación (usualmente en `C:\Program Files\Galaxy 2.0` o similar). Puedes dejar la ruta predeterminada o cambiarla si lo deseas. Haz clic en "Siguiente".</li>
+                        <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla de la selección de carpeta de destino)</small></p>
+
+                        <li><strong>Confirmar Instalación:</strong> El asistente te mostrará un resumen. Haz clic en "Instalar" para comenzar la copia de archivos.</li>
+                    </ol>
+                    <p>El proceso de copia de archivos tomará unos momentos.</p>
+                    <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla de la barra de progreso de instalación)</small></p>
+
+
+                    <h3 class="neon-text mt-5"><i class="bi bi-4-circle-fill text-warning"></i> Finalizar la Instalación</h3>
+                    <p>Una vez que todos los archivos se hayan copiado correctamente, verás una pantalla indicando que la instalación ha finalizado.</p>
+                    <p>Usualmente tendrás una opción marcada para "Ejecutar Galaxy 2.0" al cerrar el instalador. Puedes dejarla marcada si quieres iniciar la aplicación inmediatamente. Haz clic en "Finalizar".</p>
+                    <p class="text-center fst-italic text-secondary"><small>(Captura de pantalla del mensaje de instalación finalizada)</small></p>
+
+                    <hr class="my-5 border-secondary">
+
+                    <h4 class="neon-text mt-4">¡Instalación Completada!</h4>
+                    <p>¡Felicidades! Galaxy 2.0 ya está instalado en tu computadora. Deberías encontrar un ícono de acceso directo en tu escritorio o en el Menú Inicio.</p>
+                    <p>Al ejecutar Galaxy 2.0 por primera vez, te recomendamos seguir con nuestro tutorial de <a href="tutorial_configuracion_inicial.html" class="nav-link-neon d-inline">Configuración Inicial</a> para personalizar los datos de tu empresa.</p>
+                </article>
+
+                <div class="text-center mt-5">
+                    <a href="tutoriales.html" class="btn btn-neon"><i class="bi bi-arrow-left-circle-fill"></i> Volver a Todos los Tutoriales</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="currentYear"></span> Galaxy 2.0 - Desarrollado por <a href="http://ademasistemas.com" target="_blank" class="nav-link-neon d-inline">ademasistemas.com</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
