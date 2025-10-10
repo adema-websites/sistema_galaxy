@@ -151,6 +151,9 @@
             transition: all 0.3s ease; /* */
         }
         
+        .text-muted {
+            color: #aaa !important; /* */
+        }
         .btn-secondary-neon:hover, .btn-secondary-neon:focus {
             background-color: #ff9933; /* */
             border-color: #ff9933; /* */
@@ -400,7 +403,7 @@
                     <p>Registro y seguimiento de compras a proveedores y gastos generales del negocio de forma simple y eficiente.</p> </div>
                 <div class="col-md-4 mb-3">
                     <h5 class="neon-text"><i class="bi bi-clipboard-data-fill"></i> Pedidos y Presupuestos (Ventas)</h5>
-                    <p>Creación y administración de presupuestos y pedidos de clientes, con seguimiento de estados y pagos. Optimiza tu proceso de ventas.</p> </div>
+                    <p>Creación y administración de presupuestos y pedidos de clientes, con seguimiento de estados y pagos. Optimiza tu proceso de ventas. <strong>Ahora incluye campo para precios manuales</strong> que te permite ajustar precios específicos por cliente o situación.</p> </div>
                  <div class="col-md-4 mb-3">
                     <h5 class="neon-text"><i class="bi bi-cash-coin"></i> Pagos y Cuentas Corrientes</h5>
                     <p>Registro detallado de pagos recibidos y realizados. Controla saldos pendientes de clientes y a proveedores.</p> </div>
@@ -593,7 +596,10 @@
      <section id="demo" class="section-padding bg-dark neon-border"> <div class="container text-center">
            <h2 class="section-title neon-text">Prueba Galaxy 2.0: Demo del Software de Gestión</h2>
            <p>Descarga una versión de demostración y descubre cómo Galaxy 2.0 puede transformar la gestión de tu negocio o PyME.</p>
-           <a href="https://github.com/adema-websites/sistema_galaxy/releases/download/SistemaGalaxy-3.7.4v/GalaxySetup_3.7.4v.exe" class="btn btn-neon btn-lg" download target="_blank"><i class="bi bi-download"></i> Descargar Demo</a>
+           <div class="alert alert-info bg-primary text-white border-0 mb-4" style="border-radius: 10px;">
+               <i class="bi bi-star-fill neon-text"></i> <strong>¡Novedad en versión 3.7.5v!</strong> Ahora puedes establecer precios manuales en las ventas para mayor flexibilidad comercial.
+           </div>
+           <a href="https://github.com/adema-websites/sistema_galaxy/releases/download/SistemaGalaxy-3.7.5v/GalaxySetup_3.7.5v.exe" class="btn btn-neon btn-lg" download target="_blank"><i class="bi bi-download"></i> Descargar Demo</a>
             
         </section>
 
@@ -625,16 +631,39 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header border-secondary">
-                    <h5 class="modal-title neon-text" id="whatsappInfoModalLabel">Aviso Importante</h5>
+                    <h5 class="modal-title neon-text" id="whatsappInfoModalLabel">Antes de Contactarnos</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p>Recuerda que este canal es <strong>ÚNICAMENTE</strong> para consultas o la compra del sistema <strong>Galaxy 2.0</strong>.</p>
-                    <p>Si necesitas información sobre servicios de desarrollos a medida, por favor visita <a href="http://ademasistemas.com" target="_blank" rel="noopener noreferrer" class="nav-link-neon d-inline">ademasistemas.com</a>.</p>
+                <div class="modal-body text-center">
+                    <div class="mb-4">
+                        <i class="bi bi-question-circle-fill neon-text fs-1 mb-3 d-block"></i>
+                        <h4 class="neon-text mb-3">¿Ya descargaste Galaxy 2.0?</h4>
+                        <p>Para brindarte un mejor soporte, primero descarga y prueba la demo del software.</p>
+                    </div>
+                    
+                    <div class="d-grid gap-3 mb-4">
+                        <a href="https://github.com/adema-websites/sistema_galaxy/releases/download/SistemaGalaxy-3.7.5v/GalaxySetup_3.7.5v.exe" 
+                           class="btn btn-neon btn-lg" 
+                           download target="_blank">
+                            <i class="bi bi-download"></i> Descargar Galaxy 2.0 Demo
+                        </a>
+                        
+                        <a href="https://wa.me/5491127888995?text=Ya%20descargué%20Galaxy%202.0%20y%20quiero%20adquirir%20la%20versión%20completa" 
+                           class="btn btn-outline-success btn-lg" 
+                           target="_blank">
+                            <i class="bi bi-whatsapp"></i> Ya lo descargué - Contactar por WhatsApp
+                        </a>
+                    </div>
+                    
+                    <hr class="border-secondary">
+                    
+                    <div class="mt-3">
+                        <p class="small text-muted">Recuerda que este canal es <strong>ÚNICAMENTE</strong> para consultas sobre <strong>Galaxy 2.0</strong>.</p>
+                        <p class="small text-muted">Para servicios de desarrollo a medida, visita <a href="http://ademasistemas.com" target="_blank" rel="noopener noreferrer" class="nav-link-neon d-inline">ademasistemas.com</a>.</p>
+                    </div>
                 </div>
-                <div class="modal-footer border-secondary">
+                <div class="modal-footer border-secondary justify-content-center">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <a href="https://wa.me/5491127888995?text=quiero%20adquirir%20el%20galaxy%202.0.." class="btn btn-neon" target="_blank" id="confirmWhatsappButton"><i class="bi bi-whatsapp"></i> Continuar a WhatsApp</a>
                 </div>
             </div>
         </div>
